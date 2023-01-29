@@ -7,6 +7,5 @@ export const MainRoutes: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/*" element={< Navigate to="/" replace={true} />} />
         </Routes>
-
     )
 }

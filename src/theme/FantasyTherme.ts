@@ -18,6 +18,14 @@ export const FantasyTheme = createTheme({
                 }
             },
         },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    fontWeight: 400,
+                    color: "#d9d9e6"
+                }
+            }
+        }
     },
     palette: {
         primary: {
