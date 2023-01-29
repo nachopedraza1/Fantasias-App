@@ -1,9 +1,9 @@
-import { Props } from '../interfaces/interfaces';
+import { Children } from '../interfaces/interfaces';
 
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { FantasyTheme } from "./FantasyTherme"
 
-export const AppTheme = ({ children }: Props) => {
+export const AppTheme = ({ children }: Children) => {
 
     return (
         <ThemeProvider theme={FantasyTheme}>

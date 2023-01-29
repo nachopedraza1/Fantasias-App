@@ -1,0 +1,54 @@
+$color_1: #FFFFFF;
+$color_2: #db7e9a;
+$color_3: transparent;
+
+.navlinks {
+    display: flex;
+
+    li {
+        cursor: pointer;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $color_1;
+            font-weight: 400;
+            transition: all .5s;
+            position: relative;
+
+            &:after {
+                transition: all .5s;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0%;
+                content: '.';
+                color: $color_3;
+                background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+                height: 2px;
+            }
+
+            &:before {
+                transition: all .5s;
+            }
+
+            &:hover {
+                color: $color_2;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.navlinks {
+    li {
+        a {
+            position: relative;
+        }
+    }
+}
