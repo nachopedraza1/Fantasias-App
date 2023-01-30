@@ -19,7 +19,7 @@ export const Review: React.FC = () => {
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...
                     </Typography>
                 </Box>
-                <Typography fontWeight={800} textAlign="end">Hace 1 Hora</Typography>
+                <Typography textAlign="end">Hace 1 Hora</Typography>
             </Grid>
         </Grid>
     )

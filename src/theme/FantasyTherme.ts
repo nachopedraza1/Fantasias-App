@@ -8,6 +8,45 @@ export const FantasyTheme = createTheme({
             @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
             `,
         },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    color: "#d9d9e6",
+                    "&.MuiOutlinedInput-root": {
+                        "& fieldset": {
+                            borderColor: "#d9d9e6"
+                        }, '&:hover fieldset': {
+                            borderColor: '#d9d9e6',
+                        },
+                        '&.Mui-focused fieldset': {
+                            borderColor: "#2192FF",
+                        },
+                    },
+                },
+                notchedOutline: {
+                    borderColor: "#d9d9e6",
+                },
+            }
+        },
+        MuiFilledInput: {
+            styleOverrides: {
+                root: {
+                    color: "#d9d9e6",
+                    "&.MuiFilledInput-root": {
+                        "&.MuiFilledInput-underline::before": {
+                            borderBottomColor: '#FFFFFF'
+                        },
+                    }
+                },
+            }
+        },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    color: "#d9d9e6",
+                }
+            }
+        },
         MuiButton: {
             styleOverrides: {
                 root: {
@@ -29,7 +68,7 @@ export const FantasyTheme = createTheme({
     },
     palette: {
         primary: {
-            main: "#0A2647",
+            main: "#F49867",
         },
         secondary: {
             main: "#144272"
