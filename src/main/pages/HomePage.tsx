@@ -22,7 +22,7 @@ export const HomePage: React.FC = () => {
                         direction="column"
                         justifyContent="center"
                         alignItems="center"
-                        height="calc(100vh - 120px)"
+                        height="calc(100vh - 130px)"
                         gap={4}
                     >
                         <Typography variant="h4" className="bgGradientText" px={5} textAlign="center" fontWeight={800}>
@@ -37,7 +37,7 @@ export const HomePage: React.FC = () => {
                         direction="column"
                         justifyContent="center"
                         alignItems="center"
-                        height="calc(100vh - 120px)"
+                        height="calc(100vh - 130px)"
                     >
                         <Typography variant="h6" mb={1} mr={10}>
                             Ultimas reseñas de nuestros clientes.

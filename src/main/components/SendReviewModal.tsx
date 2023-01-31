@@ -18,15 +18,16 @@ const style = {
     background: "radial-gradient(125.14% 247.47% at -10.83% -4.83%, #0A2647 46.59%, #7B2869 100%)",
 };
 
+
 export const SendReviewModal = ({ openModal, handleClose }: ModalState) => {
 
     const dispatch = useCustomDispatch();
 
-    const { comment, onInputChange } = useForm<{ [key: string]: string }>({ comment: "" });
+    const { comment, onInputChange } = useForm({ comment: "" });
 
     const [stars, setStars] = useState<number | null>(3);
 
-    const onSubmitReview = (event: FormEvent<HTMLFormElement>) => {
+    const onSubmitReview = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(setReview({ comment, stars }))
     }

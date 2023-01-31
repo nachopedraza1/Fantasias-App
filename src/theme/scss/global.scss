@@ -18,6 +18,48 @@
     }
 }
 
+.bgAuth {
+    background: radial-gradient(125.14% 247.47% at -10.83% -4.83%, #0A2647 46.59%, #7B2869 100%);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    .wave-top {
+        position: absolute;
+        width: 600px;
+        top: 0;
+        right: 0;
+    }
+
+    .wave-bottom {
+        position: absolute;
+        width: 460px;
+        bottom: 0;
+        left: 0;
+    }
+
+    .circle-sm {
+        position: absolute;
+        width: 50px;
+        left: 430px;
+        bottom: 15px;
+    }
+
+    .circle-md {
+        position: absolute;
+        width: 120px;
+        left: 100px;
+        bottom: 255px;
+    }
+
+    .circle-xl {
+        position: absolute;
+        width: 140px;
+        left: 270px;
+        top: 20px;
+    }
+}
+
 .bgGradientText {
     background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
     -webkit-background-clip: text;
