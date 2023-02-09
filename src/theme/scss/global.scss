@@ -1,21 +1,16 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+    transition-delay: background-color 5000s, color 5000s;
+}
+
 .bgMain {
-    background: radial-gradient(125.14% 247.47% at -10.83% -4.83%, #0A2647 46.59%, #7B2869 100%);
+    background-image: url("assets/Mask group.jpg");
+    background-size: cover;
     height: 100vh;
     overflow: hidden;
-
-
-    .svg-home-left {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-    }
-
-    .svg-home-rigth {
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        transform: rotate(180deg);
-    }
 }
 
 .bgAuth {
@@ -26,14 +21,14 @@
 
     .wave-top {
         position: absolute;
-        width: 600px;
+        width: 430px;
         top: 0;
         right: 0;
     }
 
     .wave-bottom {
         position: absolute;
-        width: 460px;
+        width: 490px;
         bottom: 0;
         left: 0;
     }
@@ -41,22 +36,29 @@
     .circle-sm {
         position: absolute;
         width: 50px;
-        left: 430px;
-        bottom: 15px;
+        left: 400px;
+        bottom: 10px;
     }
 
     .circle-md {
         position: absolute;
         width: 120px;
-        left: 100px;
-        bottom: 255px;
+        left: 80px;
+        bottom: 250px;
     }
 
     .circle-xl {
         position: absolute;
-        width: 140px;
-        left: 270px;
-        top: 20px;
+        width: 180px;
+        left: 230px;
+        top: 30px;
+    }
+
+    .frame-auth-rigth {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        transform: rotate(270deg);
     }
 }
 
@@ -74,9 +76,10 @@
 }
 
 .bgGradientReview {
-    background: linear-gradient(90deg, #4444A5 0%, #6C3761 100%);
-    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
+    background: #ffffff29;
     border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .textShadow {
@@ -88,7 +91,7 @@
         a {
             width: 43px;
             height: 43px;
-            text-align: center;
+            text-align: start;
             margin: 0 10px;
             padding: 0px;
             text-decoration: none;

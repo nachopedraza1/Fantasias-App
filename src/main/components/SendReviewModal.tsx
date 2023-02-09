@@ -1,11 +1,10 @@
 import { FormEvent, useState } from 'react';
-import { setReview } from '../../redux/slices';
-
 import { useForm, useCustomDispatch } from '../../hooks';
+
+import { postReview } from '../../redux/thunks/review';
 
 import { Box, Fade, Modal, Typography, Rating, TextField, InputAdornment, Button } from '@mui/material';
 import { Create, RocketLaunch } from '@mui/icons-material';
-
 
 import { ModalState } from '../../interfaces/interfaces';
 
@@ -23,13 +22,13 @@ export const SendReviewModal = ({ openModal, handleClose }: ModalState) => {
 
     const dispatch = useCustomDispatch();
 
-    const { comment, onInputChange } = useForm({ comment: "" });
+    const { comment, onInputChange } = useForm<{ comment: string }>({ comment: "" });
 
     const [stars, setStars] = useState<number | null>(3);
 
     const onSubmitReview = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        dispatch(setReview({ comment, stars }))
+        dispatch(postReview({ comment, stars }));
     }
 
     return (

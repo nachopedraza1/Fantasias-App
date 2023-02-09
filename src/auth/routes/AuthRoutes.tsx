@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { LoginPage, RegisterPage } from '../pages';
 
 export const AuthRoutes: React.FC = () => {
+
     return (
         <Routes>
             <Route path="login" element={<LoginPage />} />

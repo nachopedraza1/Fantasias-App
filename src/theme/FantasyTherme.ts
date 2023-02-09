@@ -1,5 +1,5 @@
 
-import { createTheme, Link } from '@mui/material';
+import { createTheme, Link, InputLabel } from '@mui/material';
 
 export const FantasyTheme = createTheme({
     components: {
@@ -34,7 +34,7 @@ export const FantasyTheme = createTheme({
                     color: "#d9d9e6",
                     "&.MuiFilledInput-root": {
                         "&.MuiFilledInput-underline::before": {
-                            borderBottomColor: '#FFFFFF'
+                            borderBottomColor: '#8953C3',
                         },
                     }
                 },
@@ -44,6 +44,13 @@ export const FantasyTheme = createTheme({
             styleOverrides: {
                 root: {
                     color: "#d9d9e6",
+                }
+            }
+        },
+        MuiFormLabel: {
+            styleOverrides: {
+                root: {
+                    fontWeight: 600
                 }
             }
         },
@@ -64,7 +71,7 @@ export const FantasyTheme = createTheme({
                     color: "#d9d9e6"
                 }
             }
-        }
+        },
     },
     palette: {
         primary: {

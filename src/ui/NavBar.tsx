@@ -1,4 +1,6 @@
 import "../theme/scss/navbar.scss"
+
+import { Link as RouterLink } from "react-router-dom";
 import { Container, Grid, Link, List, ListItem, Typography, Button } from '@mui/material';
 
 const navItems: NavItem[] = [
@@ -10,7 +12,7 @@ const navItems: NavItem[] = [
 export const NavBar: React.FC = () => {
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" disableGutters>
             <Grid container justifyContent="space-between" alignItems="center" mt={2}>
 
                 <Grid item >
@@ -34,7 +36,9 @@ export const NavBar: React.FC = () => {
                         sx={{ px: 3 }}
                         disableRipple
                     >
-                        Ingresa
+                        <Link component={RouterLink} underline="none" color="white" to="/auth/login">
+                            Ingresa
+                        </Link>
                     </Button>
                     <Button
                         className="bgGradient"

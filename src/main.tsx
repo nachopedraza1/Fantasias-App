@@ -10,13 +10,13 @@ import { AppTheme } from './theme/AppTheme';
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AppTheme>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </AppTheme>
-    </BrowserRouter>
-  </React.StrictMode>,
+
+  <BrowserRouter>
+    <AppTheme>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </AppTheme>
+  </BrowserRouter>
+
 )

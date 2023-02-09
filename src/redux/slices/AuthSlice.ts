@@ -1,21 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
-interface AuthState {
-    uid: string,
-    email: string,
-    status: string,
-    photoURL: string,
-    userName: string,
-    errorMessage: string | null,
-}
+import { AuthState } from '../../interfaces/interfaces';
 
 const initialState: AuthState = {
     uid: "",
-    email: "",
-    status: "not-authenticated",
+    name: "",
     photoURL: "",
-    userName: "",
-    errorMessage: null,
+    message: null,
+    isLoading: false,
+    validations: null,
+    status: "not-authenticated",
 }
 
 export const AuthSlice = createSlice({
@@ -24,29 +17,36 @@ export const AuthSlice = createSlice({
     reducers: {
         login: (state, { payload }: PayloadAction<AuthState>) => {
             state.uid = payload.uid;
-            state.email = payload.email;
             state.status = "authenticated";
+            state.isLoading = false;
+            state.name = payload.name;
             state.photoURL = payload.photoURL;
-            state.userName = payload.userName;
-            state.errorMessage = null;
+            state.message = null;
+            state.validations = null;
         },
         logout: (state, { payload }: PayloadAction<AuthState>) => {
             state.uid = "";
-            state.email = "";
             state.status = "not-authenticated";
+            state.isLoading = false;
+            state.name = "";
             state.photoURL = "";
-            state.userName = "";
-            state.errorMessage = payload.errorMessage;
+            state.message = payload?.message;
+            state.validations = payload?.validations;
         },
         checkingCredentials: (state) => {
             state.uid = "";
-            state.email = "";
             state.status = "checking";
+            state.isLoading = true;
+            state.name = "";
             state.photoURL = "";
-            state.userName = "";
-            state.errorMessage = null;
+            state.message = null;
+            state.validations = null;
         },
+        clearErrorMessage: (state) => {
+            state.message = null;
+            state.validations = null;
+        }
     },
 })
 
-export const { login, logout, checkingCredentials } = AuthSlice.actions
+export const { login, logout, checkingCredentials, clearErrorMessage } = AuthSlice.actions;
