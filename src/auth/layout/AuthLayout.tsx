@@ -25,24 +25,16 @@ export const AuthLayout = ({ children }: Children) => {
                 </Typography>
 
                 <Grid container alignItems="center">
-                    <Grid item xs={6} textAlign="center" paddingLeft={20}>
-                        <img src="../assets/staartup.svg" />
+                    <Grid item xs={6} textAlign="center">
+                        <img src="../assets/mockup-auth-desk.png" width="100%" />
                     </Grid>
 
-                    <Grid item xs={6} padding={2}>
+                    <Grid item xs={6}>
                         {children}
                     </Grid>
 
                 </Grid>
-            </Container>
-
-
-            <img src="../assets/wave-auth1.svg" className="wave-top" />
-            <img src="../assets/wave-auth2.svg" className="wave-bottom" />
-            <img src="../assets/circle-auth-sm.svg" className="circle-sm" />
-            <img src="../assets/circle-auth-md.svg" className="circle-md" />
-            <img src="../assets/circle-auth-xl.svg" className="circle-xl" />
-            <img src="../assets/FrameLayout.svg" className="frame-auth-rigth" />
+            </Container >
         </Grid >
     )
 }

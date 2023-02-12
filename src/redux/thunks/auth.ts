@@ -2,7 +2,7 @@ import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 
 import { RootState } from '../store/store';
-import { checkingCredentials, login, logout } from '../slices';
+import { checkingCredentials, clearErrorMessage, login, logout } from '../slices';
 
 import fantApi from '../../api/fantApi';
 import { AxiosResponse, AxiosError } from 'axios';
@@ -23,10 +23,10 @@ export const startLogin = ({ email, password }: LoginData): ThunkAction<void, Ro
     }
 }
 
-export const startRegister = ({ name, email, password }: RegisterData): ThunkAction<void, RootState, unknown, AnyAction> => {
+export const startRegister = ({ name, email, password, confirmPassword }: RegisterData): ThunkAction<void, RootState, unknown, AnyAction> => {
     return async (dispatch) => {
         dispatch(checkingCredentials());
-        await fantApi.post("/auth/register", { name, email, password })
+        await fantApi.post("/auth/register", { name, email, password, confirmPassword })
             .then(({ data }: AxiosResponse<DataResponse>) => {
                 localStorage.setItem("token", data.token);
                 dispatch(login(data));
@@ -49,7 +49,8 @@ export const checkToken = (): ThunkAction<void, RootState, unknown, AnyAction> =
                 dispatch(login(data))
             })
             .catch(({ response }: AxiosError<any>) => {
-                dispatch(logout(response?.data))
+                dispatch(logout(response?.data));
+                dispatch(clearErrorMessage());
             });
     }
 }

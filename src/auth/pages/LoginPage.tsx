@@ -8,7 +8,7 @@ import { useForm, useCustomDispatch, useCustomSelector } from '../../hooks';
 
 import { AuthLayout } from '../layout/AuthLayout';
 import { EmailRounded, Visibility, VisibilityOff } from '@mui/icons-material';
-import { Button, IconButton, InputAdornment, Link, TextField, Typography, Grid } from '@mui/material';
+import { Button, IconButton, InputAdornment, Link, TextField, Typography, Grid, Divider } from '@mui/material';
 
 import { LoginData } from '../../interfaces/interfaces';
 
@@ -18,6 +18,14 @@ const styleButton = {
     padding: "5px",
     fontSize: "20px",
     fontWeight: 600
+}
+
+const styleButton2 = {
+    borderRadius: "5px",
+    backgroundColor: "rgb(41 37 75 / 80%)",
+    padding: "13px",
+    ":hover": { backgroundColor: "rgb(41 37 75 / 80%)" },
+    border: "1px solid #8953C3",
 }
 
 const loginForm: LoginData = {
@@ -52,37 +60,38 @@ export const LoginPage: React.FC = () => {
                     position="relative"
                     direction="column"
                     gap={2}
-                    borderRadius={1}
-                    maxWidth={{ xs: "450px" }}
+                    padding={3}
+                    borderRadius={3}
                     zIndex={1}
-                    className="animate__animated animate__fadeIn"
+                    className="bgAuthForm animate__animated animate__fadeIn"
                 >
                     <Typography
-                        position="absolute"
                         variant="h4"
                         className="bgGradientText animate__animated animate__fadeInDown"
                         fontWeight={800}
                         textAlign="center"
-                        mb={4}
-                        top={-55}
-                        left={140}
+                        mb={3}
                     >
                         ¡Bienvenido!
                     </Typography>
 
-                    <Typography
-                        maxWidth={100}
-                        variant="h4"
-                        className="bgGradientText"
-                        fontWeight={800}
-                    >
-                        Login
-                    </Typography>
+
+                    <Button variant="text" sx={styleButton2} style={{ paddingRight: 36 }} >
+                        <img src="../assets/google-logo.svg" width="30px" alt="" />
+                        Ingresar con Google
+                    </Button>
+
+                    <Button variant="text" sx={styleButton2}>
+                        <img src="../assets/facebook-logo.svg" width="12px" alt="" style={{ marginRight: 7 }} />
+                        Ingresar con Facebook
+                    </Button>
+
+                    <Divider sx={{ color: "white", fontSize: "15px" }}>OR</Divider>
 
                     <TextField
                         required={true}
                         fullWidth
-                        variant="filled"
+                        variant="outlined"
                         label="Email"
                         type="email"
                         name='email'
@@ -102,7 +111,7 @@ export const LoginPage: React.FC = () => {
 
                     <TextField
                         required={true}
-                        variant="filled"
+                        variant="outlined"
                         type={showPassword ? 'text' : 'password'}
                         placeholder="Ingresa tu contraseña."
                         label="Contraseña"
@@ -121,15 +130,14 @@ export const LoginPage: React.FC = () => {
                         }}
                     />
 
-
-                    <Typography textAlign="end">
-                        No tienes cuenta?
-                        <Link ml={1} component={RouterLink} to="/auth/register">Registrate</Link>
-                    </Typography>
-
                     <Button type="submit" variant="contained" disabled={isLoading} sx={styleButton}>
                         Ingresar
                     </Button>
+
+                    <Typography textAlign="center">
+                        No estas registrado?
+                        <Link ml={1} component={RouterLink} to="/auth/register">Registrate</Link>
+                    </Typography>
                 </Grid>
             </form>
 

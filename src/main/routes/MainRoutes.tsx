@@ -1,11 +1,17 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { HomePage } from '../pages';
+import { NavBar } from '../../ui/NavBar';
+import { HomePage, AboutUs, ContactUs } from '../pages';
 
 export const MainRoutes: React.FC = () => {
     return (
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/*" element={< Navigate to="/" replace={true} />} />
-        </Routes>
+        <>
+            <NavBar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/contactus" element={<ContactUs />} />
+                <Route path="/*" element={< Navigate to="/" replace={true} />} />
+            </Routes>
+        </>
     )
 }

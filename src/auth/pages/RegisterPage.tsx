@@ -3,12 +3,12 @@ import { Link as RouterLink } from "react-router-dom";
 
 import { useForm, useCustomDispatch, useCustomSelector } from '../../hooks';
 
-import { clearErrorMessage } from '../../redux/slices';
+import { clearErrorMessage, logout } from '../../redux/slices';
 import { startRegister } from '../../redux/thunks/auth';
 
 import { AuthLayout } from "../layout/AuthLayout";
 import { AccountCircle, EmailRounded, Visibility, VisibilityOff } from '@mui/icons-material';
-import { InputAdornment, TextField, Typography, Link, Button, IconButton, Grid } from '@mui/material';
+import { InputAdornment, TextField, Typography, Link, Button, IconButton, Grid, Divider } from '@mui/material';
 
 import { RegisterData } from '../../interfaces/interfaces';
 
@@ -24,6 +24,7 @@ const initialState = {
     name: "",
     email: "",
     password: "",
+    confirmPassword: "",
 }
 
 export const RegisterPage: React.FC = () => {
@@ -31,7 +32,7 @@ export const RegisterPage: React.FC = () => {
     const dispatch = useCustomDispatch();
 
     const { message, validations, isLoading } = useCustomSelector(state => state.auth);
-    const { name, email, password, onInputChange } = useForm<RegisterData>(initialState);
+    const { name, email, password, confirmPassword, onInputChange } = useForm<RegisterData>(initialState);
 
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -39,9 +40,8 @@ export const RegisterPage: React.FC = () => {
 
     const onSubmitForm = async (event: FormEvent) => {
         event.preventDefault();
-        dispatch(startRegister({ name, email, password }));
+        dispatch(startRegister({ name, email, password, confirmPassword }));
     };
-
     useEffect(() => { dispatch(clearErrorMessage()) }, [])
 
     return (
@@ -52,24 +52,26 @@ export const RegisterPage: React.FC = () => {
                     position="relative"
                     direction="column"
                     gap={2}
-                    borderRadius={1}
-                    maxWidth={{ xs: "450px" }}
+                    padding={3}
+                    borderRadius={3}
                     zIndex={1}
-                    className="animate__animated animate__fadeIn"
+                    className="bgAuthForm animate__animated animate__fadeIn"
                 >
                     <Typography
-                        maxWidth={160}
                         variant="h4"
-                        className="bgGradientText"
+                        className="bgGradientText animate__animated animate__fadeInDown"
                         fontWeight={800}
+                        textAlign="center"
                     >
-                        Registro
+                        ¡Bienvenido a Fantasias!
                     </Typography>
+
+                    <Divider sx={{ color: "white", fontSize: "15px" }}>REGISTRO</Divider>
 
                     <TextField
                         fullWidth
                         type="text"
-                        variant="filled"
+                        variant="outlined"
                         label="Nombre"
                         name='name'
                         value={name}
@@ -88,7 +90,7 @@ export const RegisterPage: React.FC = () => {
 
                     <TextField
                         fullWidth
-                        variant="filled"
+                        variant="outlined"
                         label="Email"
                         type="email"
                         name='email'
@@ -102,12 +104,12 @@ export const RegisterPage: React.FC = () => {
                             endAdornment:
                                 <InputAdornment position="end">
                                     <EmailRounded sx={{ color: "white" }} />
-                                </InputAdornment>,
+                                </InputAdornment>
                         }}
                     />
 
                     <TextField
-                        variant="filled"
+                        variant="outlined"
                         type={showPassword ? 'text' : 'password'}
                         placeholder="Ingresa una contraseña."
                         label="Contraseña"
@@ -129,14 +131,27 @@ export const RegisterPage: React.FC = () => {
                         }}
                     />
 
-                    <Typography textAlign="end">
-                        Ya tienes cuenta?
-                        <Link ml={1} component={RouterLink} to="/auth/login">Ingresa</Link>
-                    </Typography>
+                    <TextField
+                        variant="outlined"
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder="Repite la Contraseña"
+                        label="Repite la Contraseña"
+                        name='confirmPassword'
+                        value={confirmPassword}
+                        onChange={onInputChange}
+                        error={!!validations?.confirmPassword}
+                        helperText={validations?.confirmPassword?.msg}
+                        required={true}
+                    />
 
                     <Button variant="contained" disabled={isLoading} sx={styleButton} type="submit">
                         Enviar
                     </Button>
+
+                    <Typography textAlign="center">
+                        Ya tienes cuenta?
+                        <Link ml={1} component={RouterLink} to="/auth/login">Ingresa</Link>
+                    </Typography>
                 </Grid>
             </form>
         </AuthLayout >

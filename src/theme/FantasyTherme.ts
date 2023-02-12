@@ -14,17 +14,18 @@ export const FantasyTheme = createTheme({
                     color: "#d9d9e6",
                     "&.MuiOutlinedInput-root": {
                         "& fieldset": {
-                            borderColor: "#d9d9e6"
+                            borderColor: "#8953C3"
                         }, '&:hover fieldset': {
-                            borderColor: '#d9d9e6',
+                            borderColor: '#8953C3',
                         },
                         '&.Mui-focused fieldset': {
-                            borderColor: "#2192FF",
+                            borderColor: "#8953C3",
                         },
                     },
                 },
                 notchedOutline: {
                     borderColor: "#d9d9e6",
+                    color: "white"
                 },
             }
         },
@@ -40,24 +41,21 @@ export const FantasyTheme = createTheme({
                 },
             }
         },
-        MuiInputLabel: {
-            styleOverrides: {
-                root: {
-                    color: "#d9d9e6",
-                }
-            }
-        },
+
         MuiFormLabel: {
             styleOverrides: {
                 root: {
-                    fontWeight: 600
+                    fontWeight: 600,
+                    color: "#d9d9e6",
+                    "&.Mui-focused": {
+                        color: "#d9d9e6"
+                    }
                 }
             }
         },
         MuiButton: {
             styleOverrides: {
                 root: {
-                    ":hover": { backgroundColor: "transparent" },
                     textTransform: "none",
                     color: "white",
                     fontWeight: 400
@@ -69,6 +67,18 @@ export const FantasyTheme = createTheme({
                 root: {
                     fontWeight: 400,
                     color: "#d9d9e6"
+                }
+            }
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    ":before": {
+                        borderTop: "thin solid #8953C3"
+                    },
+                    ":after": {
+                        borderTop: "thin solid #8953C3"
+                    },
                 }
             }
         },

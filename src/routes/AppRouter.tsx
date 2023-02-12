@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom';
 
 import { AuthRoutes } from '../auth/routes/AuthRoutes';
 import { MainRoutes } from '../main/routes/MainRoutes';
@@ -14,7 +14,7 @@ export const AppRouter: React.FC = () => {
     const { status } = useCustomSelector(state => state.auth);
 
     useEffect(() => {
-        dispatch(checkToken())
+        dispatch(checkToken());
     }, [])
 
 

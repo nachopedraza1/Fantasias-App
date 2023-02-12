@@ -22,6 +22,7 @@ export interface LoginData {
 
 export interface RegisterData extends LoginData {
     name: string,
+    confirmPassword: string,
 }
 
 export interface AuthState {
@@ -43,6 +44,7 @@ export interface FormValidation {
     name?: Error;
     email?: Error;
     password?: Error;
+    confirmPassword?: Error;
 }
 
 export interface Error {

@@ -24,14 +24,14 @@ export const AuthSlice = createSlice({
             state.message = null;
             state.validations = null;
         },
-        logout: (state, { payload }: PayloadAction<AuthState>) => {
+        logout: (state, { payload }: PayloadAction<AuthState | null>) => {
             state.uid = "";
             state.status = "not-authenticated";
             state.isLoading = false;
             state.name = "";
             state.photoURL = "";
-            state.message = payload?.message;
-            state.validations = payload?.validations;
+            state.message = payload?.message || null;
+            state.validations = payload?.validations || null;
         },
         checkingCredentials: (state) => {
             state.uid = "";

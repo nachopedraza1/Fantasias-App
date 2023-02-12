@@ -7,59 +7,23 @@ input:-webkit-autofill:active {
 }
 
 .bgMain {
-    background-image: url("assets/Mask group.jpg");
+    background-image: url("../assets/bg-main-desk.jpg");
     background-size: cover;
     height: 100vh;
     overflow: hidden;
 }
 
 .bgAuth {
-    background: radial-gradient(125.14% 247.47% at -10.83% -4.83%, #0A2647 46.59%, #7B2869 100%);
+    background-image: url("../assets/auth-bg-desk.jpg");
+    background-size: cover;
     position: relative;
-    overflow: hidden;
     height: 100vh;
+    overflow: hidden;
+}
 
-    .wave-top {
-        position: absolute;
-        width: 430px;
-        top: 0;
-        right: 0;
-    }
-
-    .wave-bottom {
-        position: absolute;
-        width: 490px;
-        bottom: 0;
-        left: 0;
-    }
-
-    .circle-sm {
-        position: absolute;
-        width: 50px;
-        left: 400px;
-        bottom: 10px;
-    }
-
-    .circle-md {
-        position: absolute;
-        width: 120px;
-        left: 80px;
-        bottom: 250px;
-    }
-
-    .circle-xl {
-        position: absolute;
-        width: 180px;
-        left: 230px;
-        top: 30px;
-    }
-
-    .frame-auth-rigth {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        transform: rotate(270deg);
-    }
+.bgAuthForm {
+    background: #301f42d6;
+    box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.10);
 }
 
 .bgGradientText {
