@@ -28,9 +28,7 @@ export const HomePage: React.FC = () => {
                         <Typography variant="h5" mr={2} fontWeight={800} className="bgGradientText">12 Años en el Mercado</Typography>
                         <img src="assets/medal.png" alt="" width="30px" />
                     </Box>
-
-                    <SocialButtons />
-
+                    <SocialButtons justify="start" />
                 </Grid>
 
                 <Grid
@@ -46,7 +44,6 @@ export const HomePage: React.FC = () => {
                 </Grid>
 
             </Grid>
-            <TimeOpen />
         </MainLayout >
     )
 }

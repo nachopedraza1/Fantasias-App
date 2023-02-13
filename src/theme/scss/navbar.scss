@@ -52,3 +52,22 @@ $color_3: transparent;
         }
     }
 }
+
+.productsMenu {
+    text-align: center;
+
+    h5,
+    img {
+        transition: 0.3s;
+    }
+
+    .MuiGrid-grid-xs-2:hover {
+        cursor: pointer;
+
+        h5,
+        img {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    }
+}

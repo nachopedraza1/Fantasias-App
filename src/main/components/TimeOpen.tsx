@@ -30,14 +30,13 @@ export const TimeOpen: React.FC = () => {
 
 
     return (
-
         <Box
-            className="textShadow animate__animated animate__fadeInUp"
+            className="textShadow animate__animated animate__fadeInRight"
             textAlign="center"
             sx={{
                 position: "absolute",
                 bottom: 20,
-                right: 20
+                right: 20,
             }} >
 
             <Typography color="white">

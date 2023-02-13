@@ -6,6 +6,10 @@ input:-webkit-autofill:active {
     transition-delay: background-color 5000s, color 5000s;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .bgMain {
     background-image: url("../assets/bg-main-desk.jpg");
     background-size: cover;
