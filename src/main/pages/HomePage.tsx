@@ -1,6 +1,6 @@
 import { MainLayout } from "../Layout/MainLayout";
 import { Grid, Typography, Box } from '@mui/material';
-import { SocialButtons, TimeOpen } from "../components";
+import { Review, SocialButtons, TimeOpen } from "../components";
 
 export const HomePage: React.FC = () => {
 

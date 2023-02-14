@@ -11,6 +11,21 @@ export const Review: React.FC = () => {
 
     return (
         <>
+            <Button
+                onClick={handleOpen}
+                disableTouchRipple
+                endIcon={<RocketLaunch />}
+                sx={{
+                    color: "#FF8A71",
+                    borderColor: "#FF8A71",
+                    fontWeight: 800,
+                    mb: 1,
+                    p: 0
+                }}
+            >
+                Dejanos tu reseña!
+            </Button>
+
             <Grid
                 container
                 direction="column"
@@ -38,21 +53,6 @@ export const Review: React.FC = () => {
                     </Box>
                 </Grid>
             </Grid>
-
-            <Button
-                onClick={handleOpen}
-                disableTouchRipple
-                endIcon={<RocketLaunch />}
-                sx={{
-                    color: "#FF8A71",
-                    borderColor: "#FF8A71",
-                    fontWeight: 800,
-                    mb: 1,
-                    p: 0
-                }}
-            >
-                Dejanos tu reseña!
-            </Button>
 
             <SendReviewModal openModal={openModal} handleClose={handleClose} />
         </>

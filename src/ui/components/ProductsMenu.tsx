@@ -8,7 +8,8 @@ const menuProductsStyle = {
     height: "250px",
     zIndex: 1,
     transition: "0.4s",
-    alignItems: "center"
+    alignItems: "center",
+    display: { xs: "none", md: "flex" }
 }
 
 export const ProductsMenu: React.FC<{ menuProducts: boolean, displayMenuProducts: MouseEventHandler }> = ({ menuProducts, displayMenuProducts }) => {
