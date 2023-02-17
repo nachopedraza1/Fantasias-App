@@ -15,6 +15,9 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
+    @media (max-width: 900px) {
+        overflow-y: scroll;
+    }
 }
 
 .bgAuth {

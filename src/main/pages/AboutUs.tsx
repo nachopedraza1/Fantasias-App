@@ -11,24 +11,26 @@ export const AboutUs: React.FC = () => {
                     <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} noWrap>
                         ¿Quienes somos?
                     </Typography>
-                    <Typography mb={1} textAlign="center" noWrap>
+                    <Typography mb={1} textAlign="center" >
                         Conozca nuestra historia. Puede visitar nuestras socursales <Link href=''> aqui </Link>
                     </Typography>
                 </Grid>
 
                 <Grid
-                    xs={6}
                     item
+                    xs={12} md={6}
+                    mt={{ xs: 3, sm: 0 }}
                     display="flex"
                     flexDirection="column"
                     justifyContent="center"
-                    alignItems="start"
+                    alignItems={{ xs: "center", md: "start" }}
+                    textAlign={{ xs: "center", md: "start" }}
                 >
-                    <Typography mb={1} variant="h4" className="bgGradientText" textAlign="start" fontWeight={800} noWrap>
+                    <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} noWrap>
                         Fantasias Polirrubro
                     </Typography>
 
-                    <Typography mb={1} fontSize={18}>
+                    <Typography mb={1} fontSize={18} >
                         Fantasías nace en el año 2010, con la ayuda familiar pudimos emprender el sueño de independizarse y
                         llevar adelante nuestro propio negocio, fuimos creciendo poco a poco asumiendo el compromiso de cubrir
                         las necesidades de nuestros clientes, con novedades, surtido y atención, con este sistema de trabajo hemos
@@ -37,20 +39,16 @@ export const AboutUs: React.FC = () => {
                 </Grid>
 
                 <Grid
-                    xs={6}
                     item
-                    display="flex"
+                    xs={12} md={6}
+                    display={{ xs: "none", sm: "flex" }}
                     flexDirection="column"
                     justifyContent="center"
                     alignItems="center"
                 >
                     <img src="../assets/aboutus-ilust.svg" alt="fantasias polirrubro" width="450px" />
                 </Grid>
-
-                <Grid position="absolute" bottom={30} left={0} right={0}>
-                    <SocialButtons justify="center" />
-                </Grid>
-
+                <SocialButtons />
             </Grid>
         </MainLayout >
     )

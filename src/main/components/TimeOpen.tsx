@@ -31,6 +31,7 @@ export const TimeOpen: React.FC = () => {
 
     return (
         <Box
+            display={{ xs: "none", sm: "block" }}
             className="textShadow animate__animated animate__fadeInRight"
             textAlign="center"
             sx={{

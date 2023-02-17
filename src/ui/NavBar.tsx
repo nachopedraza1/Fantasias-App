@@ -30,7 +30,12 @@ export const NavBar: React.FC = () => {
 
     return (
         <>
-            <AppBar sx={{ zIndex: 1, backgroundColor: "transparent", mt: 2, boxShadow: "none" }}>
+            <AppBar
+                sx={{
+                    pt: 1, pb: 1, zIndex: 1,
+                    boxShadow: { xs: "transparent", md: "none" },
+                    backgroundColor: { xs: "#0D1F33", md: "transparent" }
+                }}>
                 <Container maxWidth="lg">
                     <Grid container justifyContent="space-between" alignItems="center" className="animate__animated animate__fadeInDown">
 
@@ -105,7 +110,7 @@ export const NavBar: React.FC = () => {
                 sx={{ "& .MuiDrawer-paper": { boxSizing: "border-box", width: "270px", background: "#0D1F33" } }}
                 onClose={handleDrawerToggle}
             >
-                <Toolbar sx={{ mt: 1, justifyContent: "space-between" }}>
+                <Toolbar sx={{ pt: 1, pb: 1, justifyContent: "space-between" }}>
                     <IconButton sx={{ mr: 3, p: 0 }} onClick={handleDrawerToggle}>
                         <MenuOpenOutlined sx={{ fontSize: 30 }} color="primary" />
                     </IconButton>

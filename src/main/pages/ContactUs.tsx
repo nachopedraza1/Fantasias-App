@@ -1,8 +1,8 @@
 import { MainLayout } from "../Layout/MainLayout"
-import { SocialButtons } from "../components";
 
 import { Button, Grid, Typography, Box } from '@mui/material';
 import { EmailOutlined, ForwardToInbox, LocationOn, MapOutlined, PhoneOutlined, SupportAgent } from "@mui/icons-material";
+import { SocialButtons } from "../components";
 
 
 const styleButton = {
@@ -21,7 +21,7 @@ const styleBoxContact = {
     borderRadius: "10px",
     background: "#0B1C31",
     border: "1px solid #AE67FA",
-    height: "250px"
+    minHeight: "250px"
 }
 
 const styleIcon = {
@@ -41,20 +41,20 @@ const styleIcon = {
 export const ContactUs: React.FC = () => {
     return (
         <MainLayout>
-            <Grid container alignContent="center" className="textShadow animate__animated animate__fadeIn" height="100vh">
+            <Grid container alignContent="center" className="textShadow animate__animated animate__fadeIn" position="relative" height={{ xs: "auto", md: "100vh" }}>
 
-                <Grid container direction="column" mb={10} alignItems="center" className="animate__animated animate__fadeInDown">
-                    <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} noWrap>
+                <Grid container direction="column" mb={10} mt={{ xs: 12, md: 0 }} alignItems="center" textAlign="center" className="animate__animated animate__fadeInDown">
+                    <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} >
                         ¿En que podemos ayudarte?
                     </Typography>
-                    <Typography mb={1} textAlign="center" noWrap>
+                    <Typography mb={1} textAlign="center" >
                         ¿Tienes alguna pregunta? Nos encantaría saber de usted.
                     </Typography>
                 </Grid>
 
-                <Grid container gap={2} wrap="nowrap" >
+                <Grid container gap={{ xs: 10, md: 2 }} justifyContent="center" flexWrap={{ xs: "wrap", md: "nowrap" }}>
 
-                    <Grid item xs={4} sx={styleBoxContact}>
+                    <Grid item xs={12} sm={8} md={4} sx={styleBoxContact}>
                         <Box>
                             <EmailOutlined sx={styleIcon} className="animate__animated animate__flip" />
                             <Typography variant="h6" mb={1} fontWeight={800}>
@@ -69,7 +69,7 @@ export const ContactUs: React.FC = () => {
                         </Button>
                     </Grid>
 
-                    <Grid item xs={4} sx={styleBoxContact}>
+                    <Grid item xs={12} sm={8} md={4} sx={styleBoxContact}>
                         <Box>
                             <SupportAgent sx={styleIcon} className="animate__animated animate__flip" />
                             <Typography variant="h6" mb={1} fontWeight={800}>
@@ -86,7 +86,7 @@ export const ContactUs: React.FC = () => {
                         </Button>
                     </Grid>
 
-                    <Grid item xs={4} sx={styleBoxContact}>
+                    <Grid item xs={12} sm={8} md={4} mb={{ xs: 20, md: 0 }} sx={styleBoxContact}>
                         <Box>
                             <LocationOn sx={styleIcon} className="animate__animated animate__flip" />
                             <Typography variant="h6" mb={1} fontWeight={800}>
@@ -101,13 +101,8 @@ export const ContactUs: React.FC = () => {
                             Ver en mapas
                         </Button>
                     </Grid>
-
                 </Grid>
-
-                <Grid position="absolute" bottom={30} left={0} right={0}>
-                    <SocialButtons justify="center" />
-                </Grid>
-
+                <SocialButtons />
             </Grid>
         </MainLayout >
     )

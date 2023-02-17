@@ -20,11 +20,7 @@ export const AppRouter: React.FC = () => {
 
     return (
         <Routes>
-            {
-                (status !== "authenticated")
-                    ? <Route path="/auth/*" element={< AuthRoutes />} />
-                    : null
-            }
+            <Route path="/auth/*" element={< AuthRoutes />} />
             <Route path="/*" element={< MainRoutes />} />
         </Routes>
     )

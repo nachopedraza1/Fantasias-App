@@ -6,43 +6,52 @@ export const HomePage: React.FC = () => {
 
     return (
         <MainLayout>
-            <Grid container className="textShadow animate__animated animate__fadeIn" position="relative">
+            <Grid
+                container
+                className="textShadow animate__animated animate__fadeIn"
+                position="relative"
+                height="100vh"
+                alignContent="center"
+                alignItems="center"
+                textAlign={{ xs: "center", md: "start" }}>
                 <Grid
-                    xs={6}
                     item
+                    xs={12} md={6}
                     display="flex"
                     flexDirection="column"
                     justifyContent="center"
-                    alignItems="start"
-                    height="100vh"
+                    alignItems={{ xs: "center", md: "start" }}
                 >
-                    <Typography mb={1} variant="h4" className="bgGradientText" textAlign="start" fontWeight={800} noWrap>
-                        Los mejores productos estan aqui !
+
+                    <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} display={{ xs: "flex", sm: "none" }}>
+                        Fantasias Polirrubro
                     </Typography>
 
-                    <Typography mb={1} fontSize={18}>
-                        Contamos con gran variedad de productos, de excelente calidad <br /> y a un precio conveniente, Visítanos!
+                    <Typography mb={1} variant="h4" className="bgGradientText" fontWeight={800} display={{ xs: "none", sm: "flex" }} noWrap>
+                        Los mejores productos estan aqui!
                     </Typography>
 
-                    <Box display="flex">
+                    <Typography mb={1} fontSize={18} maxWidth="540px" >
+                        Contamos con gran variedad de productos, de excelente calidad y a un precio conveniente, Visítanos!
+                    </Typography>
+
+                    <Box display="flex" width="100%" justifyContent={{ xs: "center", md: "start" }}>
                         <Typography variant="h5" mr={2} fontWeight={800} className="bgGradientText">12 Años en el Mercado</Typography>
                         <img src="assets/medal.png" alt="" width="30px" />
                     </Box>
-                    <SocialButtons justify="start" />
                 </Grid>
 
                 <Grid
-                    xs={6}
                     item
+                    xs={12} md={6}
                     display="flex"
                     flexDirection="column"
                     justifyContent="center"
                     alignItems="center"
-                    height="100vh"
                 >
-                    <img src="../assets/home-ilust.svg" alt="fantasias polirrubro" width="450px" />
+                    <img src="../assets/home-ilust.svg" alt="fantasias polirrubro" width="100%" style={{ maxWidth: "450px" }} />
                 </Grid>
-
+                <SocialButtons />
             </Grid>
         </MainLayout >
     )
