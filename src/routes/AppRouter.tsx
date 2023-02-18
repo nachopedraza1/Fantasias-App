@@ -17,10 +17,13 @@ export const AppRouter: React.FC = () => {
         dispatch(checkToken());
     }, [])
 
-
     return (
         <Routes>
-            <Route path="/auth/*" element={< AuthRoutes />} />
+            {
+                (status !== "authenticated")
+                    ? <Route path="/auth/*" element={< AuthRoutes />} />
+                    : <Route path="/*" element={< MainRoutes />} />
+            }
             <Route path="/*" element={< MainRoutes />} />
         </Routes>
     )

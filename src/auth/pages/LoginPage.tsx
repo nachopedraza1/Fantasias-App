@@ -63,6 +63,8 @@ export const LoginPage: React.FC = () => {
                     padding={3}
                     borderRadius={3}
                     zIndex={1}
+                    maxWidth="600px"
+                    m="auto"
                     className="bgAuthForm animate__animated animate__fadeIn"
                 >
                     <Typography
@@ -77,12 +79,12 @@ export const LoginPage: React.FC = () => {
 
 
                     <Button variant="text" sx={styleButton2} style={{ paddingRight: 36 }} >
-                        <img src="../assets/google-logo.svg" width="30px" alt="" />
+                        <img src="/assets/images/google-logo.svg" width="30px" alt="" />
                         Ingresar con Google
                     </Button>
 
                     <Button variant="text" sx={styleButton2}>
-                        <img src="../assets/facebook-logo.svg" width="12px" alt="" style={{ marginRight: 7 }} />
+                        <img src="/assets/images/facebook-logo.svg" width="12px" alt="" style={{ marginRight: 7 }} />
                         Ingresar con Facebook
                     </Button>
 

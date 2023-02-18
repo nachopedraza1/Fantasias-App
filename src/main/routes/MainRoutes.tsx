@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Preloader } from '../../ui/components';
 import { NavBar } from '../../ui/NavBar';
 import { TimeOpen } from '../components';
 import { HomePage, AboutUs, ContactUs } from '../pages';

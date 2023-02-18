@@ -1,6 +1,6 @@
 import { MainLayout } from "../Layout/MainLayout";
 import { Grid, Typography, Box } from '@mui/material';
-import { Review, SocialButtons, TimeOpen } from "../components";
+import { SocialButtons } from "../components";
 
 export const HomePage: React.FC = () => {
 
@@ -37,7 +37,7 @@ export const HomePage: React.FC = () => {
 
                     <Box display="flex" width="100%" justifyContent={{ xs: "center", md: "start" }}>
                         <Typography variant="h5" mr={2} fontWeight={800} className="bgGradientText">12 Años en el Mercado</Typography>
-                        <img src="assets/medal.png" alt="" width="30px" />
+                        <img src="assets/images/medal.png" alt="" width="30px" />
                     </Box>
                 </Grid>
 
@@ -49,7 +49,7 @@ export const HomePage: React.FC = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <img src="../assets/home-ilust.svg" alt="fantasias polirrubro" width="100%" style={{ maxWidth: "450px" }} />
+                    <img src="/assets/images/home-ilust.svg" alt="fantasias polirrubro" width="100%" style={{ maxWidth: "450px" }} />
                 </Grid>
                 <SocialButtons />
             </Grid>

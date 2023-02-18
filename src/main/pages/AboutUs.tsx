@@ -46,7 +46,7 @@ export const AboutUs: React.FC = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <img src="../assets/aboutus-ilust.svg" alt="fantasias polirrubro" width="450px" />
+                    <img src="/assets/images/aboutus-ilust.svg" alt="fantasias polirrubro" width="450px" />
                 </Grid>
                 <SocialButtons />
             </Grid>

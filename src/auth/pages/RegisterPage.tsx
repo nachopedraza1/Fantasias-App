@@ -55,6 +55,8 @@ export const RegisterPage: React.FC = () => {
                     padding={3}
                     borderRadius={3}
                     zIndex={1}
+                    maxWidth="600px"
+                    m="auto"
                     className="bgAuthForm animate__animated animate__fadeIn"
                 >
                     <Typography

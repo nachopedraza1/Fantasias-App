@@ -34,7 +34,7 @@ export const NavBar: React.FC = () => {
                 sx={{
                     pt: 1, pb: 1, zIndex: 1,
                     boxShadow: { xs: "transparent", md: "none" },
-                    backgroundColor: { xs: "#0D1F33", md: "transparent" }
+                    backgroundColor: { xs: "rgba(13, 31, 51, 0.9)", md: "transparent" }
                 }}>
                 <Container maxWidth="lg">
                     <Grid container justifyContent="space-between" alignItems="center" className="animate__animated animate__fadeInDown">

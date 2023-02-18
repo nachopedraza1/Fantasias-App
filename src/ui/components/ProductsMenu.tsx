@@ -21,37 +21,37 @@ export const ProductsMenu: React.FC<{ menuProducts: boolean, displayMenuProducts
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Jugueteria
                         </Typography>
-                        <img src="../assets/jugueteria.png" alt="Jugueteria fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/jugueteria.png" alt="Jugueteria fantasias polirrubro" width="110px" />
                     </Grid>
                     <Grid item xs={2}>
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Libreria
                         </Typography>
-                        <img src="../assets/libreria.png" alt="Libreria fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/libreria.png" alt="Libreria fantasias polirrubro" width="110px" />
                     </Grid>
                     <Grid item xs={2}>
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Regaleria
                         </Typography>
-                        <img src="../assets/regaleria.png" alt="Regaleria fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/regaleria.png" alt="Regaleria fantasias polirrubro" width="110px" />
                     </Grid>
                     <Grid item xs={2}>
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Bijouterie
                         </Typography>
-                        <img src="../assets/bijouterie.png" alt="Bijouterie fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/bijouterie.png" alt="Bijouterie fantasias polirrubro" width="110px" />
                     </Grid>
                     <Grid item xs={2}>
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Bazar
                         </Typography>
-                        <img src="../assets/Bazar.png" alt="Bazar fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/Bazar.png" alt="Bazar fantasias polirrubro" width="110px" />
                     </Grid>
                     <Grid item xs={2}>
                         <Typography mb={3} variant="h5" className="bgGradientText" fontWeight={800} noWrap>
                             Otros
                         </Typography>
-                        <img src="../assets/otros.png" alt="Otros fantasias polirrubro" width="110px" />
+                        <img src="../assets/images/otros.png" alt="Otros fantasias polirrubro" width="110px" />
                     </Grid>
                 </Grid>
             </Container>

@@ -1,5 +1,3 @@
-import "../../theme/scss/global.scss";
-
 import { Container, Grid, Typography } from '@mui/material';
 
 import { Children } from "../../interfaces/interfaces";
@@ -13,6 +11,7 @@ export const AuthLayout = ({ children }: Children) => {
         >
             <Container maxWidth="lg" >
                 <Typography
+                    display={{ xs: "none", md: "flex" }}
                     variant="h4"
                     position="absolute"
                     className="bgGradientText"
@@ -25,11 +24,11 @@ export const AuthLayout = ({ children }: Children) => {
                 </Typography>
 
                 <Grid container alignItems="center">
-                    <Grid item xs={6} textAlign="center">
-                        <img src="../assets/mockup-auth-desk.png" width="100%" />
+                    <Grid item xs={6} textAlign="center" display={{ xs: "none", md: "flex" }}>
+                        <img src="/assets/images/mockup-auth-desk.png" width="100%" />
                     </Grid>
 
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         {children}
                     </Grid>
 
